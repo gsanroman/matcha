@@ -1,0 +1,25 @@
+h1{color:#025157}
+
+/*            
+        INSTRUCCIONES EJERCICIO 1 RETO 4
+        Los colores que van a aplicar son los siguientes:
+            Texto que va debajo del título: #46484c
+            Texto promocional: #8b8b8bcc
+            Texto del botón: #fff 
+            Color de fondo de la página: #fffbf7
+            Color de fondo del botón: #025157
+            */
+            
+    body{
+        background-color:#fffbf7 
+    }
+    p:first-of-type{
+        color:#46484c
+    }
+    form +p{
+        color:#8b8b8bcc
+    }
+    button:last-child{
+        color:#fff;
+         background-color: #025157
+        }
