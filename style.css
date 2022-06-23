@@ -1,4 +1,7 @@
-h1{color:#025157}
+h1{color:#025157;
+    font-family: 'Alegreya', serif;
+    text-align: center    
+}
 
 /*            
         INSTRUCCIONES EJERCICIO 1 RETO 4
@@ -23,3 +26,52 @@ h1{color:#025157}
         color:#fff;
          background-color: #025157
         }
+    
+    .header{margin: 40px 0px 20px 0px; font-size: 0px}
+/*n nuestro caso usaremos el hack del font-size, resulta que si lo que le da tamaño a los espacios en blanco es el tamaño de la fuente, podemos darle un tamaño de fuente 0 al contenedor y luego asignar el tamaño de fuente correcto en cada elemento hijo. Hagamos una prueba, teniendo en cuenta que el tamaño de la fuente será de 16px para el menú de navegación:*/
+
+
+    .header > * {
+        display: inline-block; 
+        font-size: 16px;
+        vertical-align: middle;
+        height: 100%;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .logo{width: 10%}
+    .logo >  * {width:100%}
+
+    .navbar {
+        height: 45px;
+        width: 70%;
+        text-align: center;
+        color:#025157
+        
+      }
+      
+      .actions {
+        width: 15%;
+        text-align: right;
+        font-size: 14px;
+        margin:0px 10px;
+      }
+
+    
+
+    ul>* {display: inline; margin: 0px 25px; color:#025157;}
+
+
+    .main{margin-top: 140px;
+    text-align: center;}
+
+    .actions a{color:#67b54b }
+    
+    .actions *:nth-child(2){
+        color:white;
+        background-color: #67b54b;
+        padding: 12px 14px;
+        border: solid red 0px;
+        border-radius: 5px;
+        ;
+    }
