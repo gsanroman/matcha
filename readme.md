@@ -30,7 +30,7 @@ Crea el contenido del sitio y despliega en un cuenta [NETLIFY](https://app.netli
 
 el contenido està [aqui](https://clever-fox-91388a.netlify.app/)
 
-
+recurso para jugar con git: https://ohmygit.org/
 
 ## Sesion 2 modelo de caja CSS
 
@@ -112,3 +112,77 @@ De W3SCHOOLS
 \* Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
 
 * A veces conviene darle tamaño cero a la fuente, àra que no rellene los espacios 
+
+
+
+## Sesion 3 FlexBox
+
+El elemento que recibe la propiedad `display: flex` se le conoce como `flex container`, mientras que a los elementos contenidos en el elemento en mención se le conoce como `flex items`.
+
+ ### Propiedades del flex container
+
+```css
+.mi_flex-container{
+/*paso 1: al contenedor agregar el display:flex*/
+    display: flex;
+/*paso 2: set el flex direction; por default es row, pero lo puedes cambiar a column*/
+    flex-direction: row;
+/*paso 3: el defaulñt es no wrap: internta ponder todo en la misma fila;
+con wrap, cuando no caben los manda a la fila de abajo*/
+    flex-wrap: wrap;
+
+/*la forma breve es flex-flow sintetiza wrap y direction*/
+/*EJE X*/
+
+justify-content: center;/*space-around*/
+/*EJE Y*/
+align-items: stretch;
+    
+/*Si hay màs de un renglon*/
+align-content: space-around
+    
+/*
+space around respeta los margenes a la izquierda y a la derecha
+space between pega los elementos a los extremos de la pantalla
+space evenly empalma los margenes
+    */
+
+}
+```
+
+
+
+cuando es una columna, `justify-content` cambia a vertical y `align-items` a horizontal.
+
+### Propiedades del flex item
+
+```css
+.mi_flex-container div:nth-child(2){
+    order:2;
+    flex-grow: 5; /*Tambien existe un flex-shrink, que es lo contario*/
+    background-color: blue;
+     align-self:flex-end; 
+    
+    /*Esta propiedad acepta los mismos valores de align-items y sus valores son usados para un elemento específico*/
+}
+```
+
+recursos:
+
+https://flexboxfroggy.com/#es
+
+http://www.flexboxdefense.com/
+
+
+
+
+
+### POSICION
+
+* **Fixed**: usa como referencia el navegador, no el body. Asi, el elemento nunca se mueve. Toma como referencia su esquina superior izquierda
+
+
+
+* **Sticky**: combina fixed y relative. 
+  * Los elemento top, right, left y bottom no le mueven al objeto, sino la final cuando se hace scroll, en que posicion se comportara como fixed. 
+  * Toma como referencia al parent, no al navegador

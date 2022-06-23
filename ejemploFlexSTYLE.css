@@ -1,0 +1,59 @@
+html{font-size:10px;}
+
+.mi_flex-container{
+/*paso 1: al contenedor agregar el display:flex*/
+    display: flex;
+/*paso 2: set el flex direction; por default es row, pero lo puedes cambiar a column*/
+    flex-direction: row;
+/*paso 3: el defaulñt es no wrap: internta ponder todo en la misma fila;
+con wrap, cuando no caben los manda a la fila de abajo*/
+    flex-wrap: wrap;
+
+/*la forma breve es flex-flow sintetiza wrap y direction*/
+
+justify-content: center;
+align-items: stretch;
+align-content: space-between;
+
+}
+
+.mi_flex-container{
+        background-color: cadetblue;
+    padding: 2rem;
+    height: 50rem;
+}
+
+.mi_flex-container > *
+{background-color: bisque;
+height: 10rem;
+width: 10rem;
+padding: 1rem;
+margin:1rem;
+border: solid 1px green;
+text-align: center;
+vertical-align: middle;
+line-height: 10rem;
+font-size: 2rem;
+}
+
+/*propiedades de los flex items*/
+/*con order, puedes numerarlos, ordenrlos se ponen al final de los que no tengan orden*/
+.mi_flex-container div:nth-child(1){
+    order:1;
+    flex-grow: 10;
+    background-color: red;
+}
+.mi_flex-container div:nth-child(2){
+    order:2;
+    flex-grow: 5;
+    background-color: blue;
+
+}
+
+.mi_flex-container div:nth-child(3){
+    flex-basis: 10px;
+    order:3;
+    flex-shrink: 2 /*es lo inverso a grow*/;
+    background-color: pink;
+
+}
