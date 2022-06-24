@@ -21,6 +21,8 @@
     </head>
     <body>
 <!--Sesion 2: barra de navegacion-->
+<section class="fijo">
+    
 
 <header class="header">
     <a href="" class="logo">
@@ -40,6 +42,8 @@
         <button>Start free trial</button>
     </div>
 </header>
+</section>
+
 
 <section class="main">
 
@@ -56,16 +60,51 @@
     <p>Start publishing today with a free <b> 7-day trial.<br>
             No credit card required.</b></p>
 
+
     <figure >
         <img src="img/capterra.png" alt="Imagen capterra">
         <figcaption>Capterra</figcaption>
     </figure>
 
 
-    <figure >
+    <figure id="fig2">
             <img src="img/imagen1.png" alt="Imagen uno">
             <figcaption></figcaption>
         </figure>
     </section>
+
+
+<section class="publicidad">
+
+<!--Forma 1 de agregar video
+<video src="img/video1.webm" controls poster="img/portada.jpg"></video>
+-->
+
+<div id="conVideo">
+<!--Forma 2-->
+<video  controls poster="img/portada.jpg">
+    <source src="img/video1.webm" type="video/webm">
+    <source src="img/video2.mp4" type="video/mp4">
+</video>
+<img src="img/imagen2.png" alt="">
+</div>
+
+<div id="conText">
+    <h2>Publish to your blog in minutes, not hours.</h2>
+    <p>Your blog is your most powerful asset to build, engage, and retain a loyal audience. But you don’t have hours to create content that may or may not work. With Matcha, instantly publish from our library of 10,000+ professionally written articles and build your email list faster with our powerful conversion tool.
+    </p>
+
+    <p>Start publishing today:</p>
+    <form action="">
+        <input type="email" name="" id="" placeholder="Enter email">
+        <button type="submit">Start my trial</button>
+    </form>
+</div>
+</section>
+
+
+
+
+
     </body>
 </html>

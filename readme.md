@@ -186,3 +186,38 @@ http://www.flexboxdefense.com/
 * **Sticky**: combina fixed y relative. 
   * Los elemento top, right, left y bottom no le mueven al objeto, sino la final cuando se hace scroll, en que posicion se comportara como fixed. 
   * Toma como referencia al parent, no al navegador
+
+
+
+### Video
+
+lleva atributos 
+
+* src: Origen del video
+
+* poster: imagen o portada, antes de que se reproduzca
+
+* controls para poder reproducir, parusar, parar...
+
+  ```html
+  <video 
+         src="img/video1.webm" 
+         controls 
+         poster="img/portada.jpg"
+   ></video>	
+  ```
+
+  
+
+version alternativa, para poder integrar multiples formatos, para que asea soportado en todos los navegadores
+
+la etiqueta de video van sin src; deltro lde los tags de video, va una etqueta **< source >**
+
+```html
+<!--Forma 2-->
+<video  controls poster="img/portada.jpg">
+    <source src="img/video1.webm" type="video/webm">
+    <source src="img/video2.mp4" type="video/mp4">
+</video>
+```
+
