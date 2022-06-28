@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>GRID</title>
+	<link rel="stylesheet" href="">
+	<style>
+		.granCaja{
+			height: 300px;
+			width: 500px;
+			margin:auto;
+			display: grid;
+			grid-template-columns: 1fr 2fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+			grid-template-areas: 
+			"c1 c1 c2"
+			"c3 c3 c2"
+			"c4 c5 c5";
+			grid-column-gap: 10px;
+			grid-row-gap: 10px;
+
+		}
+
+	#caja1{grid-area: c1; background-color: red}
+	#caja2{grid-area: c2; background-color: blue}
+	#caja3{grid-area: c3; background-color: green}
+	#caja4{grid-area: c4; background-color: pink}
+	#caja5{grid-area: c5; background-color: yellow}
+	
+	.otraCaja{
+		height: 300px;
+		display: grid;
+		grid-row-gap: 5px;
+		grid-column-gap: 5px;
+		grid-template-columns: repeat(auto-fit,minmax(50px, 1fr));
+
+	}
+
+#cajita1{background-color: gray}
+#cajita2{background-color: green}
+#cajita3{background-color: steelblue}
+#cajita4{background-color: magenta}
+
+	</style>
+</head>
+<body>
+	<div class="granCaja">
+		<div class="gridElement" id="caja1"></div>
+		<div class="gridElement" id="caja2"></div>
+		<div  class="gridElement"  id="caja3"></div>
+		<div  class="gridElement"  id="caja4"></div>
+		<div  class="gridElement"  id="caja5"></div>
+		<div  class="gridElement"  id="caja6"></div>
+	</div>
+
+	<div class="otraCaja">
+		<div id="cajita1"></div>
+		<div id="cajita2"></div>
+		<div id="cajita3"></div>
+		<div id="cajita4"></div>
+	</div>
+</body>
+</html>

@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+
+
+
 # Ejercicio Matcha 
 
 ## Sesion 1
@@ -220,4 +230,156 @@ la etiqueta de video van sin src; deltro lde los tags de video, va una etqueta *
     <source src="img/video2.mp4" type="video/mp4">
 </video>
 ```
+
+
+
+<details><summary> intento de seccion colabsable</summary>
+    y aqui va kla mieda
+</details>
+
+
+
+
+
+
+
+### Pseudoelementos
+
+```css
+P :: first-letter{color:blue} /*selecciona primera linea*/
+p :: first-line{}
+p :: first-line{}/*Que pasa cuando se selecciona texto*/
+
+/*BEFORE Y AFTER SON RELATIVOS A UN CONTENIDO*/
+p::before{ content:url(...)/*pone el contenido antes del texto*/}
+
+p::after{ content:url(...)/*pone el contenido al final del texto*/}
+```
+
+van con dos dos puntos **::**
+
+
+## sesion 4 GRID
+
+ ver [video](https://youtu.be/EFafSYg-PkI)
+
+1. Set un grid container
+   1. Set numero de columnas con un **grid template** e indicando las medidas de cada columna
+   2. set el numero de rwenglones infdicando el alto de cada uno
+
+```css
+elemento{
+display:grid /*declara que es un grid*/
+
+grid-template-columns: 300px 300px /*declara que consta de columnas o bien. EL NUMERO DE COLUMNAS SE DECLARA INDICANDO LAS MEDIDAS DE CADA UNO*/
+
+grid-template-columns: 50% 50% /*declara que consta de columnas o bien*/
+
+/*se puede usar fracciones como unidad de medida, cada fraccion vale como porcentaje de la suma de fracciones*/
+
+grid-template-columns: 1fr 2fr;
+
+/*se ajusta al alto del contenido */
+grid-template-rows:1fr 1fr;
+height:100vh /*asi, fr se convierte en una fraccion del tamaño del contenedor*/
+}
+
+
+/*tambien se pueden definir con REPEAT*/
+grid-template-columns: repeat(2,200px)
+/*o para que sea resposoivo*/
+grid-template-columns: repeat(auto-fill,200px)
+/*o*/
+grid-template-columns: repeat(auto-fit,200px)
+grid-template-columns: repeat(auto-fit,minmax(300px,1fr))
+
+/*dentro de repeat puedes sustituir el argumento numerico de columnas por auto-fit o auto-fill y el argumento de width por un minmax
+
+```
+
+2. grid elements
+
+   1. A cada elemento dentro del driv contenedor se le puede indicar su ancho y alto en funcion de las columnas rows indicadas. 
+
+      ```css
+      .gridElement {
+      grid-column-start:1;
+      grid-column-end:3
+      /*o bien*/
+      grid-column:1/3
+      }
+      /*1 es el borde de la pantalla*/
+      /*si pides tres columnas tienes 4 ejes*/
+      ```
+
+3. Grid templates
+
+   genera una estructura nombrando los elementos
+
+   **HTML**
+
+   ```html
+   <div class="granCaja">
+   		<div class="gridElement" id="caja1"></div>
+   		<div class="gridElement" id="caja2"></div>
+   		<div  class="gridElement"  id="caja3"></div>
+   		<div  class="gridElement"  id="caja4"></div>
+   		<div  class="gridElement"  id="caja5"></div>
+   		<div  class="gridElement"  id="caja6"></div>
+   	</div>
+   ```
+
+   
+
+**CSS**
+
+```css
+.granCaja{
+			height: 300px;
+			width: 500px;
+			margin:auto;
+			display: grid;
+			grid-template-columns: 1fr 2fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+			grid-template-areas: 
+			"c1 c1 c2"
+			"c3 c3 c2"
+			"c4 c5 c5"
+		}
+/*Aqui se nombra a las cajas con la propiedad grid-area*/
+	#caja1{grid-area: c1; background-color: red}
+	#caja2{grid-area: c2; background-color: blue}
+	#caja3{grid-area: c3; background-color: green}
+	#caja4{grid-area: c4; background-color: pink}
+	#caja5{grid-area: c5; background-color: yellow}
+```
+
+**RESULTADO**
+
+![resultado](img/ejemploGrid.png)
+
+se repiten propiedades de flexbox, como align-content, justify-content, align-items o align-self
+
+
+
+
+
+**repeat y minmax para el template**
+
+```css
+.otraCaja{
+		height: 300px;
+		display: grid;
+		grid-row-gap: 5px;
+		grid-column-gap: 5px;
+		grid-template-columns: repeat(auto-fit,minmax(50px, 1fr));
+
+	}
+```
+
+![ejemplo2](img/ejemploGrid2.png)
+
+
+
+[juego para aprender grid](https://cssgridgarden.com/#es)
 
